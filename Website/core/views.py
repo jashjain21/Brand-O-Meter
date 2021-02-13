@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
-
+from .models import otherDetails
 from django.contrib.auth import authenticate, login, logout
-
+from .forms import img
 from django.contrib import messages
 
 from django.contrib.auth.decorators import login_required
@@ -64,3 +64,12 @@ def loginPage(request):
 def logoutUser(request):
 	logout(request)
 	return redirect('login')
+
+def bulk(request):
+    if request.method == "POST":
+        my_file = request.FILES.get("file")
+        otherDetails.objects.create(image = my_file)
+        return redirect("/bulk")
+    else:
+        form = img()
+        return render(request, 'bulk.html')

@@ -1,0 +1,27 @@
+.dz{
+	background-color: black;
+	border: dashed !important;
+	border-color: #ccc;
+	border-radius: 10px;
+}
+
+
+.dz:hover{
+	background-color: aliceblue !important;
+}
+
+.imageBox {
+  position: relative;
+  float: left;
+}
+
+.imageBox .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.imageBox:hover .hoverImg {
+  display: block;
+}

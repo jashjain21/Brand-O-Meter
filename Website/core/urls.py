@@ -9,6 +9,7 @@ from . import views
 urlpatterns = [
 	path('login/', views.loginPage, name="login"),  
 	path('logout/', views.logoutUser, name="logout"),
+	path('bulk',views.bulk, name="bulk"),
 	# path('editprofile/', views.profile, name="profile"),
 	# path('profile/<str:name>', views.profilepage, name="profilepage"),
 ]
