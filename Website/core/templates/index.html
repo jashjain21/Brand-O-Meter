@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +8,7 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static 'login/style.css' %}" />
     <title>Sign in & Sign up Form</title>
   </head>
   <body>
@@ -107,6 +108,6 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="{% static 'login/app.js' %}"></script>
   </body>
 </html>
