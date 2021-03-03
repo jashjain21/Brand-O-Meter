@@ -1,0 +1,24 @@
+item {
+  id:1
+  name:'oreo'
+}
+item {
+  id:2
+  name:'hide_and_seek'
+}
+item {
+  id:3
+  name:'bourbon'
+}
+item {
+  id:4
+  name:'dark_fantasy'
+}
+item {
+  id:5
+  name:'jim_jam'
+}
+item {
+  id:6
+  name:'chocopie'
+}
