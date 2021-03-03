@@ -73,3 +73,5 @@ def bulk(request):
     else:
         form = img()
         return render(request, 'bulk.html')
+def main(request):
+    return HttpResponse("hello")
