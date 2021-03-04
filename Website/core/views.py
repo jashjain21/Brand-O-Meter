@@ -161,9 +161,9 @@ TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
 #         print(area_dic)
 #         position_dic={}
 #         directions = {
-#             1:['left','top'],
-#             2:['middle','middle'],
-#             3:['right','bottom']
+#             1:['Left','Top'],
+#             2:['Middle','Middle'],
+#             3:['Right','Bottom']
 #         }
 #         #     area=im_height*im_width
 
