@@ -61,14 +61,13 @@ a {
   <div class="container m-t-md">
 
   {% for image,value in result_dic.items %}
-    {{image}}
     <!-- First row -->
     <div class="row">
       <div class="col-xs-12 col-md-4">
         <!-- Card -->
         <article class="card animated fadeInLeft">
-          
-          <img class="card-img-top img-responsive" src={{image}} alt="" />
+          <!-- <img class="card-img-top img-responsive" src=" {% static "../media/imagesrec/images/{{image}}" %}" alt="" /> -->
+          <img class="card-img-top img-responsive" src="/media/imagesrec/images/{{image}}" alt="" />
             <div class="card-block">
                 {% for key1,val1 in value.0.items %}
                   <h4 class="card-title">{{key1}}</h4>

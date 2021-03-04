@@ -50,11 +50,10 @@ from .forms import CreateUserForm
 
 # PATH_TO_LABELS = 'C:\\Users\\windows\\Desktop\\hackathon\\SPIT_HACKATHON\\Github\\Demand-Forecasting\\Website\\labelmap.pbtxt'
 # category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
-# import pathlib
+import pathlib
 # # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-# PATH_TO_TEST_IMAGES_DIR = pathlib.Path('C:\\Users\\windows\\Desktop\\hackathon\\SPIT_HACKATHON\\Github\\Demand-Forecasting\\Website\\media\\imagesrec\\images')
-# TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
-
+PATH_TO_TEST_IMAGES_DIR = pathlib.Path('C:\\Users\\windows\\Desktop\\hackathon\\SPIT_HACKATHON\\Github\\Demand-Forecasting\\Website\\media\\imagesrec\\images')
+TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
 # detection_model=tf.saved_model.load('C:\\Users\\windows\\Desktop\\hackathon\\SPIT_HACKATHON\\Github\\Demand-Forecasting\\Website\\saved_model')
 
 # def run_inference_for_single_image(model, image):
@@ -190,7 +189,7 @@ from .forms import CreateUserForm
 #                 position_dic[key][1] = directions[position_dic[key][1]][1]
 #         print("Position is as follows")
 #         print(position_dic)  
-#         result_dic[str(image_path)[:-4]+'new.jpg']=[area_dic,position_dic]
+#         result_dic[str(image_path).split('\\')[-1][:-4]+'new.jpg']=[area_dic,position_dic]
 #         print(result_dic)
 
 def loginPage(request):
@@ -260,8 +259,6 @@ def main(request):
         # PATH_TO_TEST_IMAGES_DIR = pathlib.Path('C:\\Users\\windows\\Desktop\\hackathon\\SPIT_HACKATHON\\Github\\Demand-Forecasting\\Website\\media\\imagesrec\\images')
         # TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
         # testing()
-    result_dic = {'C:\\Users\\KashMir\\Desktop\\Demand-Forecasting\\Website\\media\\imagesrec\\images\\jash.jpg':[{'hide_and_seek': 16.828192794320884, 'oreo': 15.088242364541538, 'bourbon': 5.835317175046396},{'hide_and_seek': ['left', 'bottom'], 'oreo': ['middle', 'top'], 'bourbon': ['middle', 'bottom']}],'C:\\Users\\KashMir\\Desktop\\Demand-Forecasting\\Website\\media\\imagesrec\\images\\jash1.jpg':[{'hide_and_seek': 16.828192794320884, 'oreo': 15.088242364541538, 'bourbon': 5.835317175046396},{'hide_and_seek': ['left', 'bottom'], 'oreo': ['middle', 'top'], 'bourbon': ['middle', 'bottom']}]}
+    result_dic = {'zzz.jpg':[{'hide_and_seek': 16.828192794320884, 'oreo': 15.088242364541538, 'bourbon': 5.835317175046396},{'hide_and_seek': ['left', 'bottom'], 'oreo': ['middle', 'top'], 'bourbon': ['middle', 'bottom']}],'4.jpg':[{'hide_and_seek': 16.828192794320884, 'oreo': 15.088242364541538, 'bourbon': 5.835317175046396},{'hide_and_seek': ['left', 'bottom'], 'oreo': ['middle', 'top'], 'bourbon': ['middle', 'bottom']}]}
 
-
-    
     return render(request, 'result.html',{'result_dic':result_dic})
