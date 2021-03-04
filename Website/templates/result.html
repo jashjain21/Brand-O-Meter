@@ -60,10 +60,12 @@ a {
     <h1 align='center'>Images</h1>
   <div class="container m-t-md">
 
-  {% for image,value in result_dic.items %}
+  
     <!-- First row -->
     <div class="row">
+    {% for image,value in result_dic.items %}
       <div class="col-xs-12 col-md-4">
+      
         <!-- Card -->
         <article class="card animated fadeInLeft">
           <!-- <img class="card-img-top img-responsive" src=" {% static "../media/imagesrec/images/{{image}}" %}" alt="" /> -->
@@ -78,10 +80,13 @@ a {
             </div>
           
         </article><!-- .end Card -->
+        
       </div>
+      {% endfor %}
+
       </div>
     </div><!-- .end Second row -->
-  {% endfor %}
+  
 
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
